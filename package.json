@@ -1,0 +1,21 @@
+{
+  "name": "bdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "knex": "./node_modules/.bin/knex $* --knexfile ./database/database.js",
+    "database:migrate": "npm run knex migrate:latest",
+    "database:seed": "npm run knex seed:run",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "faker": "^5.5.3",
+    "knex": "^0.95.4",
+    "pg": "^8.6.0"
+  }
+}

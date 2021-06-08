@@ -1,0 +1,18 @@
+version: "3.5"
+
+services:
+  postgres:
+    image: postgres:13.1
+    container_name: dbExo-Nolan
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: bookDb
+      PGDATA: /data/postgres
+    volumes:
+      - data:/data/postgres
+    ports:
+      - "16064:5432"
+
+volumes:
+  data:
